@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, system, sans-serif;
+}
+
+body {
+  margin:0;
+  background-color: #1f0223;
+  color:#8e5496;
+  overflow:hidden;
+}
+#app {
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  height:100vh;
+}
+
+.clock-svg {
+  display: flex;
+}
+.clock-svg svg {
+  zoom:8;
+  height:100vh;
+  margin:0 auto;
+
+}
+.clock-svg path {
+  transition: all ease 200ms;
+}
+
+.clock .clock-remaining {
+  position: absolute;
+  display:flex;
+  top:0;
+  left:0;
+  justify-content:space-around;
+  align-items:center;
+  width:100vw;
+  height:100vh;
+}
+
+.clock .clock-remaining--inner {
+  position:relative;
+  font-size: 5em;
+  text-shadow:
+  1px 0 0 #1f0223, 
+  1px 1px 0 #1f0223, 
+  -1px 1px 0 #1f0223, 
+  1px -1px 0 #1f0223, 
+  -1px -1px 0 #1f0223, 
+  -1px 0 0 #1f0223, 
+  0 -1px 0 #1f0223,
+  0 0 1px #1f0223
+  ;
+  animation: 1s infinite;
+
+}
+
+@keyframes blink {
+
+  50% {
+    color:#ef4343;
+  }
+}
+
+
+.clock-restart {
+  position:absolute;
+  width:100%;
+
+}
+
+.clock-restart button {
+  width:100%;
+  display: block;
+}
+
+input,button {
+  background-color: transparent;
+  color:inherit;
+  padding:.33em .66em;
+  border:currentColor 1px solid;
+
+}
+
+button.inverse {
+  color:#1f0223;
+}
